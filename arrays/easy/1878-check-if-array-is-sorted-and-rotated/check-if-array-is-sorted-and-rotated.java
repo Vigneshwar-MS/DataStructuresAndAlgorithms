@@ -4,20 +4,17 @@ class Solution {
         int[] arr = new int[len];
         int index = -1;
         for(int i = 0; i < len; i++){
-            if(i != len - 1 && nums[i] > nums[i+1]) index = i;
+            if(i != len - 1 && nums[i] > nums[i+1]) index = i + 1;
         }
         
-        int k = 0;
-        for(int j = index + 1; j < len; j++){
-            arr[k++] = nums[j];
-        }
+        if(index != -1){
+            for(int i = 0; i < len; i++){
+                arr[i] = nums[(i + index) % len];
+            }
 
-        for(int i = 0; i <= index; i++){
-            arr[k++] = nums[i];
-        }
-
-        for(int i = 0; i < len; i++){
-            if(i != len - 1 && arr[i] > arr[i+1]) return false;
+            for(int i = 0; i < len; i++){
+                if(i != len - 1 && arr[i] > arr[i+1]) return false;
+            }
         }
 
         return true;   
