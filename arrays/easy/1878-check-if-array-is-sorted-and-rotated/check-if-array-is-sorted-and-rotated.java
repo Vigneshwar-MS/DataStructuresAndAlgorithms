@@ -1,4 +1,5 @@
 class Solution {
+    
     public boolean check(int[] nums) {
         int len = nums.length;
         int[] arr = new int[len];
@@ -20,3 +21,6 @@ class Solution {
         return true;   
     }
 }
+
+//Time Complexity is O(3N) ~ O(N)
+//Space Complexity is ~ O(N)
