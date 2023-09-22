@@ -1,30 +1,30 @@
 class Solution {
     public void sortColors(int[] nums) {
-        int[] sizeArr = new int[3];
+        
         int len = nums.length;
-
         if(len == 1) return;
 
-        for(int i = 0; i < len; i++){
-            int val = nums[i] == 0 ? sizeArr[0]++ : nums[i] == 1 ? sizeArr[1]++ : sizeArr[2]++;
-        }
-
-        int[] ans = new int[len];
-        int k = 0, i = 0;
-        while(i <= 2){
-            if(sizeArr[i] == 0){
-                i++;
-                continue;
+        int low = 0, mid = 0, high = len - 1;
+        while(mid <= high){
+            if(nums[mid] == 0){
+                int temp = nums[mid];
+                nums[mid] = nums[low];
+                nums[low++] = temp;
+                mid++;
             }
-            ans[k++] = i;
-            sizeArr[i]--;
-        }
+            else if(nums[mid] == 1){
+                mid++;
+            }
+            else{
+                int temp = nums[mid];
+                nums[mid] = nums[high];
+                nums[high--] = temp;
 
-        for(int t = 0; t < len; t++){
-            nums[t] = ans[t];
+            }
         }
+        
     }
 }
 
 //Time Complexity is ~ O(N)
-//Space Complexity is ~ O(N)
+//Space Complexity is ~ O(1)
