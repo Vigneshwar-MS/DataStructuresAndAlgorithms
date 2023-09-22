@@ -26,7 +26,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(getLongestSubarrayWithOnlyPositiveElements(new int[]{-1, 1, 1}, 1));
+        System.out.println(lenOfLongSubarr(new int[]{-1, 1, 1}, 1));
     }
 }
 
