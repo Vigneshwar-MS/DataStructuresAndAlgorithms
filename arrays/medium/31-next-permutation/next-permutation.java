@@ -27,14 +27,6 @@ class Solution {
                 break;
             }
         }
-        
-    }
-
-    static void swap(int nums[], int first, int second){
-        int temp = nums[first];
-        nums[first] = nums[second];
-        nums[second] = temp;
-
     }
 
     static void sort(int[] nums, int left, int right){
@@ -46,3 +38,6 @@ class Solution {
         }
     }
 }
+
+//Time complexity is O(3N) ~ O(N)
+//Space complexity is O(1))
