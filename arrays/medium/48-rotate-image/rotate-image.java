@@ -25,3 +25,6 @@ class Solution {
         }
     }
 }
+
+//Time Complexity is O(N^2)
+//Space Complexity is O(1)
