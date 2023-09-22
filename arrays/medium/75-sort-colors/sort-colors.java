@@ -20,12 +20,6 @@ class Solution {
             sizeArr[i]--;
         }
 
-        // for(int j = 0; j < len; j++){
-        //     if(sizeArr[i] == 0) i++;
-        //     ans[j] = i;
-        //     sizeArr[i]--;
-        // }
-
         for(int t = 0; t < len; t++){
             nums[t] = ans[t];
         }
