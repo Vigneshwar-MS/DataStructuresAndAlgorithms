@@ -45,3 +45,6 @@ class Solution {
         return ans;
     }
 }
+
+//Time Complexity is O(log N)
+//Space Complexity is O(1)
