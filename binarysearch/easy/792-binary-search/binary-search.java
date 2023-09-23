@@ -17,3 +17,6 @@ class Solution {
         return -1;
     }
 }
+
+//Time Complexity is O(logN)
+//Space Complexity is O(1)
