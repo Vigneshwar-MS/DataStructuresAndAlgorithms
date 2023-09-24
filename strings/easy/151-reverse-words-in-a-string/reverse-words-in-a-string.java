@@ -2,7 +2,9 @@ class Solution {
     public String reverseWords(String s) {
         int n = s.length();
      
-        String temp = "", ans = "";
+        StringBuilder temp = new StringBuilder();
+        StringBuilder ans = new StringBuilder();
+
         for(int i = 0; i < n; i++){
             if(s.charAt(i) == ' '){
                 if(!temp.isEmpty()){
@@ -10,13 +12,13 @@ class Solution {
                         ans = temp;
                     }
                     else{
-                        ans = temp + " " + ans;
+                        ans.insert(0, temp + " ");
                     }
-                    temp = "";
+                    temp = new StringBuilder();
                 }
             }
             else{
-                temp += s.charAt(i);
+                temp.append(s.charAt(i));
             }
         }
         if(!temp.isEmpty()){
@@ -24,11 +26,11 @@ class Solution {
                 ans = temp;
             }
             else{
-                ans = temp + " " + ans;
+                ans.insert(0, temp + " ");
             }
         }
 
-        return ans;
+        return ans.toString();
     }
 }
 
