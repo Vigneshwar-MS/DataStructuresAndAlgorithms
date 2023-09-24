@@ -1,7 +1,7 @@
 class Solution {
     public String frequencySort(String s) {
 
-        String ans = "";
+        StringBuilder ans = new StringBuilder();
         char[] ch = s.toCharArray();
         int len = s.length();
 
@@ -22,12 +22,13 @@ class Solution {
             }
         });
 
+
         for(Map.Entry<Character, Integer> e : lst){
             for(int i = 0; i < e.getValue(); i++){
-                ans += new String(String.valueOf(e.getKey()));
+                ans.append(String.valueOf(e.getKey()));
             }
         }
-        return ans;
+        return ans.toString();
 
         
     }
