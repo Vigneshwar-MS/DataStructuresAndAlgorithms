@@ -35,4 +35,4 @@ class Solution {
 }
 
 //Time Complexity is O(N)
-//Space Complexity is O(N) for use of ans variable
+//Space Complexity is O(1)
