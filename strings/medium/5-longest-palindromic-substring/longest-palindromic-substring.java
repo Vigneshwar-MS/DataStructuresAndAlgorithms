@@ -24,11 +24,8 @@ class Solution {
         return ans;
     }
 
-    static String checkPalindrome(String s, int first, int second){
-        int left = first, right = second, len = s.length();
-        if(left >= 0 && right < len){
-            if(s.charAt(left) != s.charAt(right)) return "";
-        }
+    static String checkPalindrome(String s, int left, int right){
+        int len = s.length();
         
         while(left >= 0 && right < len){
             if(s.charAt(left) != s.charAt(right)){
