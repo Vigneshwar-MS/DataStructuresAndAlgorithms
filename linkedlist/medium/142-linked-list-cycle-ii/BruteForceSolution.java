@@ -1,4 +1,4 @@
-class RecursiveSolution {
+class BruteForceSolution {
 
     //Source - https://leetcode.com/problems/linked-list-cycle-ii/
     //Tag - Linked List
