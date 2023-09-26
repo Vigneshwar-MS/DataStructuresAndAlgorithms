@@ -12,13 +12,15 @@
 public class Solution {
     public boolean hasCycle(ListNode head) {
         
-        ListNode first = head, second = head;
-        while(second != null && second.next != null){
-            first = first.next;
-            second = second.next.next;
-            if(first == second){
+        Set<ListNode> set = new HashSet<>();
+        
+        while(head != null){
+            
+            if(set.contains(head)){
                 return true;
             }
+            set.add(head);
+            head = head.next;
         }
         
         return false;
@@ -26,4 +28,4 @@ public class Solution {
 }
 
 //Time Complexity is O(N)
-//Space Complexity is O(1)
+//Space Complexity is O(N)
