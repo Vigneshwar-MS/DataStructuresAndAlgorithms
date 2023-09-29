@@ -10,7 +10,7 @@ class Solution {
 
         for(int i = 0; i < len; i++){
             Character ch = s.charAt(i);
-            if(ch == '(' || ch == '{' || ch == '['){
+            if(!map.containsKey(ch)){
                 stack.push(ch);   
             }
             else{
