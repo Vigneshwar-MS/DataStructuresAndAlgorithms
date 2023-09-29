@@ -24,6 +24,9 @@ class MyStack {
     }
 }
 
+//Time Complexity for push operation is O(N), pop is O(1), top is O(1), empty is O(1)
+//Space Complexity is O(N) and we use a single queue
+
 /**
  * Your MyStack object will be instantiated and called as such:
  * MyStack obj = new MyStack();
