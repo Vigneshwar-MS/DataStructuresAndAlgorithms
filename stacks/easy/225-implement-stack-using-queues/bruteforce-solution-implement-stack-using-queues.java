@@ -34,7 +34,7 @@ class MyStack {
     }
 }
 //Time complexity is O(N) for push operation and O(1) for pop, top, emtpy operations
-//Space complexity is O(2N), as we use two queues
+//Space complexity is O(2N), as we use two queues and it will be ~O(N)
 
 /**
  * Your MyStack object will be instantiated and called as such:
