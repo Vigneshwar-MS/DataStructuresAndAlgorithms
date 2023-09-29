@@ -20,3 +20,6 @@ class Solution {
         return ans;
     }
 }
+
+//Time Complexity is O(M * N), where M and N are lenght of nums1 and nums2
+//Space Complexity is O(1)
