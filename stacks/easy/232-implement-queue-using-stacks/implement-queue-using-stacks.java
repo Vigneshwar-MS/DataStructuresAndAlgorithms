@@ -8,32 +8,34 @@ class MyQueue {
     }
     
     public void push(int x) {
-        while(!s1.isEmpty()){
-            s2.push(s1.pop());
-        }
         s1.push(x);
-        while(!s2.isEmpty()){
-            s1.push(s2.pop());
-        }
     }
     
     public int pop() {
-        
-        return s1.pop();
+        if(s2.isEmpty()){
+            while(!s1.isEmpty()){
+                s2.push(s1.pop());
+            }
+        }
+        return s2.pop();
     }
     
     public int peek() {
-        
-        return s1.peek();
+        if(s2.isEmpty()){
+            while(!s1.isEmpty()){
+                s2.push(s1.pop());
+            }
+        }
+        return s2.peek();
     }
     
     public boolean empty() {
-        return s1.isEmpty();
+        return s1.isEmpty() && s2.isEmpty();   
     }
 }
 
-//Time Complexity is O(N) for push, O(1) for pop, peek and empty
-//Space Complexity is O(2N) ~ O(N) as we use two stacks
+//Time Complexity is O(1) amortized for push, pop and peek
+//Space Complexity is O(2N)
 /**
  * Your MyQueue object will be instantiated and called as such:
  * MyQueue obj = new MyQueue();
