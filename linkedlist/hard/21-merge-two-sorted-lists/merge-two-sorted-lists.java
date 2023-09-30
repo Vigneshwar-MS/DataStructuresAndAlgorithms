@@ -17,43 +17,33 @@ class Solution {
         ListNode dummy = new ListNode();
         ListNode tail = dummy;
 
-        ListNode left = list1, right = list2;
-
-        while(left != null && right != null){
-            if(left.val == right.val){
-                tail.next = left;
-                ListNode nnodeLeft = left.next;
-                left.next = null;
+        while(list1 != null && list2 != null){
+            if(list1.val == list2.val){
+                tail.next = list1;
                 tail = tail.next;
-                left = nnodeLeft;
+                list1 = list1.next;
 
-                tail.next = right;
-                ListNode nnodeRight = right.next;
-                right.next = null;
+                tail.next = list2;
                 tail = tail.next;
-                right = nnodeRight;
+                list2 = list2.next;
             }
-            else if(left.val < right.val){
-                tail.next = left;
-                ListNode nnodeLeft = left.next;
-                left.next = null;
+            else if(list1.val < list2.val){
+                tail.next = list1;
                 tail = tail.next;
-                left = nnodeLeft;
+                list1 = list1.next;
             }
             else{
-                tail.next = right;
-                ListNode nnodeRight = right.next;
-                right.next = null;
+                tail.next = list2;
                 tail = tail.next;
-                right = nnodeRight;
+                list2 = list2.next;
             }
         }
-        if(left != null){
-            tail.next = left;
+        if(list1 != null){
+            tail.next = list1;
         }
 
-        if(right != null){
-            tail.next = right;
+        if(list2 != null){
+            tail.next = list2;
         }
 
         return dummy.next;
