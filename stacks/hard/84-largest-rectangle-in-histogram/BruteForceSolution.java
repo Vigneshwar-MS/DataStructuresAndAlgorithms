@@ -20,5 +20,5 @@ class BruteForce {
 
 }
 
-//Time Complexity is O(N)
-//Space complexity is O(N)
+//Time Complexity is O(N*N)
+//Space complexity is O(1)
