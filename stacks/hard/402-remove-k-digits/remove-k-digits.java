@@ -26,20 +26,19 @@ class Solution {
        }
 
         if(stack.isEmpty()) return "0";
-        
+
         StringBuilder sb = new StringBuilder();
         while(!stack.isEmpty()){
             sb.insert(0, stack.pop());
         }
 
         return sb.toString();
-
-
-
         
     }
 }
 
+//Time Complexity is O(N)
+//Space Complexity is O(N)
 
 
 
