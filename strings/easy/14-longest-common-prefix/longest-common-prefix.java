@@ -1,28 +1,18 @@
 class Solution {
     public String longestCommonPrefix(String[] strs) {
         
-        if(strs.length == 1) return strs[0];
-        Comparator<String> comp = (a, b) -> a.compareTo(b);
-        String smallest = Arrays.stream(strs).min(comp).get();
-        int k = 0;
-        for(int i = 0; i < smallest.length(); i++) {
-            if (checkPrefix(i, strs)) {
-                k++;
-            }
-            else{
-                break;
-            }
-        }
-        return smallest.substring(0, k);
-    }
+        if(strs.length == 0) return "";
+        String prefix = strs[0];
 
-    static boolean checkPrefix(int index, String[] strs){
-        for(int i = 0; i < strs.length; i++){
-            if(strs[i].charAt(index) != strs[0].charAt(index)){
-                return false;
+        for(int i = 1; i < strs.length; i++) {
+            while(strs[i].indexOf(prefix) != 0){
+                prefix = prefix.substring(0, prefix.length() - 1);
             }
         }
-        return true;
+        return prefix;
     }
 
 }
+
+//Time Complexity :  O ()N).  where n is the number of strings in the input array. 
+//Space complexity is O(1).
