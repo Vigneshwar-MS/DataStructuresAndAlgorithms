@@ -2,8 +2,6 @@ class Solution {
     public String frequencySort(String s) {
 
         StringBuilder ans = new StringBuilder();
-        char[] ch = s.toCharArray();
-        int len = s.length();
 
         HashMap<Character, Integer> map = new HashMap<>();
         for(char c : s.toCharArray()){
@@ -22,14 +20,16 @@ class Solution {
             }
         });
 
-
         for(Map.Entry<Character, Integer> e : lst){
-            for(int i = 0; i < e.getValue(); i++){
-                ans.append(String.valueOf(e.getKey()));
-            }
+            // for(int i = 0; i < e.getValue(); i++){
+            //     ans.append(String.valueOf(e.getKey()));
+            // }
+            ans.append(String.valueOf(e.getKey()).repeat(e.getValue()));
         }
-        return ans.toString();
-
         
+        return ans.toString();
     }
 }
+
+//Time Complexity is O(N) + O(M logM), where N is the length of String and M is length of map
+//space Complexity is O(M) + O(N)
