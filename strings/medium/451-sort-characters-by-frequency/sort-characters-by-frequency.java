@@ -21,9 +21,6 @@ class Solution {
         });
 
         for(Map.Entry<Character, Integer> e : lst){
-            // for(int i = 0; i < e.getValue(); i++){
-            //     ans.append(String.valueOf(e.getKey()));
-            // }
             ans.append(String.valueOf(e.getKey()).repeat(e.getValue()));
         }
         
