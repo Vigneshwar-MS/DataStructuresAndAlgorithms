@@ -15,3 +15,6 @@ class Solution {
     }
 
 }
+
+//Time Complexity is O(N)
+//Space Complexity is O(N)
