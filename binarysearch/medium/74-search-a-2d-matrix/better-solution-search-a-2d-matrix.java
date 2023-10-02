@@ -23,5 +23,5 @@ class Solution {
     }
 }
 
-//Time Complexity is O(M * logN), where M is number of rows and N is number of columns
+//Time Complexity is O(M + logN), where M is number of rows and N is number of columns
 //Space Complexity is O(1)
