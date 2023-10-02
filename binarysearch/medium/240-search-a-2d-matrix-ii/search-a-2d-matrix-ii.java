@@ -1,16 +1,20 @@
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
         
-        int row = matrix.length, col = matrix[0].length;
+        int rowLength = matrix.length, colLength = matrix[0].length;
+        int row = 0, col = colLength - 1;
     
-        for(int i = 0; i < row; i++){
-            for(int j = 0; j < col; j++){
-                if(matrix[i][j] == target) return true;
+
+        while(row < rowLength && col >= 0){
+            if(matrix[row][col] == target) return true;
+            else if(matrix[row][col] < target) row++;
+            else{
+                col--;
             }
         }
         return false;
     }
 }
 
-//Time Complexity is O(M * logN), where M is number of rows and N is number of columns
+//Time Complexity is O(M + N), where M is number of rows and N is number of columns
 //Space Complexity is O(1)
