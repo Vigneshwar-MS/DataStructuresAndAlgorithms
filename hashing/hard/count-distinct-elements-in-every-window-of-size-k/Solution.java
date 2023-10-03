@@ -1,5 +1,6 @@
 class Solution {
-
+//    Source of the problem - https://practice.geeksforgeeks.org/problems/count-distinct-elements-in-every-window/1
+//    Tag - Array Medium level
 
     static ArrayList<Integer> countDistinct(int A[], int n, int k)
     {
