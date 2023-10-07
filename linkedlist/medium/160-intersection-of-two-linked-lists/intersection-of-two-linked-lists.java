@@ -35,5 +35,5 @@ public class Solution {
     }
 
 }
-//Time complexity is O(M+N), where M is the length of linked list A and B is the length of linked list B
+//Time complexity is O(M + N), where M is the length of linked list A and B is the length of linked list B
 //Space complexity is O(1)
